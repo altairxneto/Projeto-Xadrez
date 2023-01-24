@@ -1,5 +1,5 @@
-﻿namespace Tabuleiro {
-    internal class Posicao {
+﻿namespace TabuleiroJogo {
+    public class Posicao {
         public int Linha { get; set; }
         public int Coluna { get; set; }
 
