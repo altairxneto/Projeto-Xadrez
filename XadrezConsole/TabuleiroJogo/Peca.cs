@@ -6,12 +6,14 @@ namespace TabuleiroJogo {
         public int QteMovimentos { get; protected set; }
         public Tabuleiro Tabuleiro { get; protected set; }
 
-        public Peca(Posicao posicao, Tabuleiro tabuleiro, Cor cor) {
-            Posicao = posicao;
+        public Peca( Tabuleiro tabuleiro, Cor cor) {
+            Posicao = null;
             Tabuleiro = tabuleiro;
             Cor = cor;
             QteMovimentos = 0;
         }
+
+
 
     }
 }

@@ -15,5 +15,10 @@ namespace TabuleiroJogo {
         public Peca PecaTabuleiro(int linha, int coluna) {
             return _pecas[linha, coluna];
         }
+
+        public void ColocarPeca(Peca peca, Posicao posicao) {
+            _pecas[posicao.Linha, posicao.Coluna] = peca;
+            peca.Posicao = posicao;
+        }
     }
 }
