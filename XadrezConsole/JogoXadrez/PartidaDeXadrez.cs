@@ -11,8 +11,8 @@ namespace JogoXadrez {
             Tabuleiro = new Tabuleiro(8, 8);
             Turno = 1;
             JogadorAtual = Cor.Branca;
-            ColocarPecas();
             Terminada = false;
+            ColocarPecas();
         }
 
         public void ExecutarMovimento(Posicao origem, Posicao destino) {
