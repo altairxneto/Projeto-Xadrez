@@ -35,6 +35,18 @@ namespace TabuleiroJogo {
             peca.Posicao = posicao;
         }
 
+        public Peca RetirarPeca(Posicao posicao) {
+            if(PecaTabuleiro(posicao) == null) {
+                return null;
+            }
+
+            Peca auxiliar = PecaTabuleiro(posicao);
+            auxiliar.Posicao = null;
+
+            _pecas[posicao.Linha, posicao.Coluna] = null;
+            return auxiliar;
+        }
+
         public bool PosicaoValida(Posicao posicao) {
             if(posicao.Linha < 0 || posicao.Linha >= Linhas || posicao.Coluna < 0 || posicao.Coluna >= Colunas) {
                 return false;

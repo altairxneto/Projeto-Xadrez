@@ -13,7 +13,9 @@ namespace TabuleiroJogo {
             QteMovimentos = 0;
         }
 
-
+        public void IncrementarQuantidadeDeMovimentos() {
+            QteMovimentos++;
+        }
 
     }
 }
