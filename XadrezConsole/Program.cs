@@ -6,19 +6,10 @@ using JogoXadrez;
 namespace Xadrez_Console {
     class Program {
         static void Main(string[] args) {
+            PosicaoXadrez posicao = new PosicaoXadrez('c', 7);
 
-            try {
-                Tabuleiro tabuleiro = new Tabuleiro(8, 8);
-
-                tabuleiro.ColocarPeca(new Torre(tabuleiro, Cor.Preta), new Posicao(0, 0));
-                tabuleiro.ColocarPeca(new Torre(tabuleiro, Cor.Preta), new Posicao(1, 3));
-                tabuleiro.ColocarPeca(new Rei(tabuleiro, Cor.Preta), new Posicao(0, 9));
-
-                Tela.ImprimirTabuleiro(tabuleiro);
-            }
-            catch(TabuleiroException excecao) {
-                Console.WriteLine(excecao.Message);
-            }
+            Console.WriteLine(posicao);
+            Console.WriteLine(posicao.ToPosicao());
         }
     }
 }
