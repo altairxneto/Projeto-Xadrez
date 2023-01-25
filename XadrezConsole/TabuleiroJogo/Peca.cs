@@ -17,6 +17,23 @@ namespace TabuleiroJogo {
             QteMovimentos++;
         }
 
+        public bool ExisteMovimentosPossiveis() {
+            bool[,] matriz = MovimentosPossiveis();
+
+            for(int linha = 0; linha < Tabuleiro.Linhas; linha++) {
+                for(int coluna = 0; coluna < Tabuleiro.Colunas; coluna++) {
+                    if (matriz[linha, coluna]) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public bool PodeMoverPara(Posicao posicao) {
+            return MovimentosPossiveis()[posicao.Linha, posicao.Coluna];
+        }
+
         public abstract bool[,] MovimentosPossiveis();
 
     }
