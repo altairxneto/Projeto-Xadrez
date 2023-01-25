@@ -9,7 +9,11 @@ namespace TabuleiroJogo {
         public Tabuleiro(int linhas, int colunas) {
             Linhas = linhas;
             Colunas = colunas;
-            _pecas = new Peca[linhas, Colunas];
+            _pecas = new Peca[linhas, colunas];
+        }
+
+        public Peca PecaTabuleiro(int linha, int coluna) {
+            return _pecas[linha, coluna];
         }
     }
 }

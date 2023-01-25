@@ -13,6 +13,5 @@ namespace TabuleiroJogo {
             QteMovimentos = 0;
         }
 
-
     }
 }
